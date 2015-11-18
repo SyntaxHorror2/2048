@@ -316,13 +316,19 @@ hr {
 
   .tile-inner {
     border-radius: $tile-border-radius;
-
-    background: $tile-color;
-    text-align: center;
     font-weight: bold;
+    font-size: 18px;
+    background: $tile-color;
     z-index: 10;
-
-    font-size: 55px;
+    position: relative;
+    div {
+        position: absolute;
+        bottom: 0px;
+        right: 0px;
+        height: 25px;
+        line-height: 25px;
+        background: rgba(0, 0, 0, 64);
+    }
   }
 
   // Movement transition
@@ -353,8 +359,25 @@ hr {
     $power: pow($base, $exponent);
 
     &.tile-#{$power} .tile-inner {
+      // Calculate base background color
+      $nth-color: nth($special-colors, $exponent);
+
+      //$bright-color: nth($nth-color, 2);
+      $bright-color: true;
+
+      @if $bright-color {
+        color: $bright-text-color;
+      }
+
+      // Set background
       background: url('../images/#{$power}.jpg');
       background-size: cover;
+
+      // Add glow
+      $glow-opacity: max($exponent - 4, 0) / ($limit - 4);
+
+      box-shadow: 0 0 30px 10px rgba($tile-gold-glow-color, $glow-opacity / 1.8),
+                    inset 0 0 0 1px rgba(white, $glow-opacity / 3);
     }
 
     $exponent: $exponent + 1;
@@ -364,12 +387,6 @@ hr {
   &.tile-super .tile-inner {
     color: $bright-text-color;
     background: mix(#333, $tile-gold-color, 95%);
-
-    font-size: 30px;
-
-    @include smaller($mobile-threshold) {
-      font-size: 10px;
-    }
   }
 }
 
