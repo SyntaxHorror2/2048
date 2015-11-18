@@ -323,27 +323,38 @@ hr {
     z-index: 10;
     font-size: 55px; }
   .tile.tile-2 .tile-inner {
-    background: url("../2.jpg"); }
+    background: url("../images/2.jpg");
+    background-size: cover; }
   .tile.tile-4 .tile-inner {
-    background: url("../4.jpg"); }
+    background: url("../images/4.jpg");
+    background-size: cover; }
   .tile.tile-8 .tile-inner {
-    background: url("../8.jpg"); }
+    background: url("../images/8.jpg");
+    background-size: cover; }
   .tile.tile-16 .tile-inner {
-    background: url("../16.jpg"); }
+    background: url("../images/16.jpg");
+    background-size: cover; }
   .tile.tile-32 .tile-inner {
-    background: url("../32.jpg"); }
+    background: url("../images/32.jpg");
+    background-size: cover; }
   .tile.tile-64 .tile-inner {
-    background: url("../64.jpg"); }
+    background: url("../images/64.jpg");
+    background-size: cover; }
   .tile.tile-128 .tile-inner {
-    background: url("../128.jpg"); }
+    background: url("../images/128.jpg");
+    background-size: cover; }
   .tile.tile-256 .tile-inner {
-    background: url("../256.jpg"); }
+    background: url("../images/256.jpg");
+    background-size: cover; }
   .tile.tile-512 .tile-inner {
-    background: url("../512.jpg"); }
+    background: url("../images/512.jpg");
+    background-size: cover; }
   .tile.tile-1024 .tile-inner {
-    background: url("../1024.jpg"); }
+    background: url("../images/1024.jpg");
+    background-size: cover; }
   .tile.tile-2048 .tile-inner {
-    background: url("../2048.jpg"); }
+    background: url("../images/2048.jpg");
+    background-size: cover; }
   .tile.tile-super .tile-inner {
     color: #f9f6f2;
     background: #3c3a32;

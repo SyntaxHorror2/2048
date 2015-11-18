@@ -353,7 +353,8 @@ hr {
     $power: pow($base, $exponent);
 
     &.tile-#{$power} .tile-inner {
-      background: url('../#{$power}.jpg');
+      background: url('../images/#{$power}.jpg');
+      background-size: cover;
     }
 
     $exponent: $exponent + 1;
