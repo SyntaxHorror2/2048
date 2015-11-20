@@ -48,6 +48,16 @@ h1.title {
   color: darkred;
 }
 
+img.headimage {
+    width: $field-width;
+    transform-origin: top right;
+    transform: translate(-50px, -50px) rotate(-15deg);
+    
+    @include smaller($mobile-threshold) {
+        width: $field-width / 2;
+    }
+}
+
 @include keyframes(move-up) {
   0% {
     top: 25px;

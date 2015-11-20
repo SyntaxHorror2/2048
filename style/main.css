@@ -23,6 +23,14 @@ h1.title {
   float: left;
   color: darkred; }
 
+img.headimage {
+  width: 500px;
+  transform-origin: top right;
+  transform: translate(-50px, -50px) rotate(-15deg); }
+  @media screen and (max-width: 520px) {
+    img.headimage {
+      width: 250px; } }
+
 @-webkit-keyframes move-up {
   0% {
     top: 25px;
