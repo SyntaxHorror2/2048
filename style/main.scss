@@ -54,7 +54,8 @@ img.headimage {
     transform: translate(-50px, -50px) rotate(-15deg);
     
     @include smaller($mobile-threshold) {
-        width: $field-width / 2;
+        width: 280px;
+        transform: translate(-25px, -25px) rotate(-15deg);
     }
 }
 
@@ -223,8 +224,6 @@ hr {
         height: 60px;
         line-height: 60px;
         margin-top: 222px;
-        // height: $field-width;
-        // line-height: $field-width;
       }
 
       .lower {
@@ -332,6 +331,7 @@ hr {
     background: $tile-color;
     z-index: 10;
     position: relative;
+    
     div {
         position: absolute;
         bottom: 0px;
@@ -461,12 +461,12 @@ hr {
 
 @include smaller($mobile-threshold) {
   // Redefine variables for smaller screens
-  $field-width: 280px;
-  $grid-spacing: 10px;
-  $grid-row-cells: 4;
-  $tile-size: ($field-width - $grid-spacing * ($grid-row-cells + 1)) / $grid-row-cells;
-  $tile-border-radius: 3px;
-  $game-container-margin-top: 17px;
+  $field-width: 280px !global;
+  $grid-spacing: 10px !global;
+  $grid-row-cells: 4 !global;
+  $tile-size: ($field-width - $grid-spacing * ($grid-row-cells + 1)) / $grid-row-cells !global;
+  $tile-border-radius: 3px !global;
+  $game-container-margin-top: 17px !global;
 
   html, body {
     font-size: 15px;
@@ -518,7 +518,12 @@ hr {
 
   // Rest of the font-size adjustments in the tile class
   .tile .tile-inner {
-    font-size: 35px;
+    font-size: 12px;
+  }
+  
+  .tile .tile-inner div {
+    height: 15px;
+    line-height: 15px;
   }
 
   .game-message {
