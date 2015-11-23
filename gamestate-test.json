@@ -93,9 +93,27 @@
         }
       ],
       [
-        null,
-        null,
-        null,
+        {
+          "position": {
+            "x": 3,
+            "y": 0
+          },
+          "value": 8192
+        },
+        {
+          "position": {
+            "x": 3,
+            "y": 1
+          },
+          "value": 16384
+        },
+        {
+          "position": {
+            "x": 3,
+            "y": 2
+          },
+          "value": 32768
+        },
         null
       ]
     ]
